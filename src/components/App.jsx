@@ -10,9 +10,11 @@ const App = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: "center",
         minHeight: "100vh",
+        paddingLeft: "500px",
         gap: "30px",
+        textAlign: "center",
       }}
     >
       <Profile

@@ -7,42 +7,60 @@
 }
 
 .profile {
-  width: 300px;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
   border: 1px solid #e4e4e4;
-  border-radius: 5px;
-  background-color: #fff;
-  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .description {
+  text-align: center;
   padding: 20px;
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  background-color: #2c2b2b;
 }
 
 .name {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .tag,
 .location {
-  font-size: 14px;
+  font-size: 16px;
   color: #757575;
+  margin: 0;
 }
 
 .stats {
   display: flex;
-  justify-content: space-around;
-  padding: 15px 0;
+  justify-content: space-between;
+  width: 100%;
   background-color: #f3f6f9;
+  border-top: 1px solid #e4e4e4;
+}
+
+.statsItem {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #333131;
+}
+
+.statsItem:last-child {
+  border-right: none; /* Убирает линию справа у последнего элемента */
 }
 
 .stats li {
@@ -52,11 +70,12 @@
 }
 
 .label {
-  font-size: 12px;
-  color: #757575;
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 5px;
 }
 
 .quantity {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
 }
