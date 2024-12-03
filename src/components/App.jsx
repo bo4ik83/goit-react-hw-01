@@ -1,10 +1,20 @@
 import Profile from "./Profile/Profile";
+import FriendList from "./FriendList/FriendList";
 import userData from "../userData.json";
-import "./App.css";
+import friends from "../friends.json";
 
 const App = () => {
   return (
-    <div className="profile-container">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+        minHeight: "100vh",
+        gap: "30px",
+      }}
+    >
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -12,6 +22,7 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
+      <FriendList friends={friends} />
     </div>
   );
 };

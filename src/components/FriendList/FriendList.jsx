@@ -1,43 +1,31 @@
-// [
-// const friends = [
-//     {
-//      avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998592.png",
-//      name: "Mango",
-//      isOnline: true,
-//      id: 1812
-//      },
-//      {
-//      avatar: "https://cdn-icons-png.flaticon.com/512/616/616438.png",
-//      name: "Kiwi",
-//      isOnline: false,
-//      id: 1137
-//      },
-//      {
-//      avatar: "https://cdn-icons-png.flaticon.com/512/1623/1623681.png",
-//      name: "Ajax",
-//      isOnline: true,
-//      id: 1213
-//      },
-//      {
-//      avatar: "https://cdn-icons-png.flaticon.com/512/2977/2977285.png",
-//      name: "Jay",
-//      isOnline: true,
-//      id: 1714
-//      },
-//      {
-//      avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998749.png",
-//      name: "Poly",
-//      isOnline: false,
-//      id: 1284
-//      }
-//     ];
-// ]
-    
-    // const App = () => {
-    //  return (
-    //  <div>
-    //  <FriendList friends={friends} />
-    //  </div>
-    //  );
-    // };
-    
+import PropTypes from "prop-types";
+import FriendListItem from "../FriendListItem/FriendListItem";
+import styles from "./FriendList.module.css";
+
+const FriendList = ({ friends }) => {
+  return (
+    <ul className={styles.list}>
+      {friends.map((friend) => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+        />
+      ))}
+    </ul>
+  );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+};
+
+export default FriendList;
