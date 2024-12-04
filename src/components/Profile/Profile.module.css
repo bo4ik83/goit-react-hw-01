@@ -60,7 +60,7 @@
 }
 
 .statsItem:last-child {
-  border-right: none; /* Убирает линию справа у последнего элемента */
+  border-right: none;
 }
 
 .stats li {

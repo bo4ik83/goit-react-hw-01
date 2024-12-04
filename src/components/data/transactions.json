@@ -1,0 +1,21 @@
+[
+    {
+      "id": "1e0700a2-5183-4291-85cc-2065a036a683",
+      "type": "invoice",
+      "amount": "964.82",
+      "currency": "LRD"
+    },
+    {
+      "id": "a30f821b-4d25-4ff0-abdd-e340b3f0dd2b",
+      "type": "payment",
+      "amount": "686.50",
+      "currency": "WST"
+    },
+    {
+      "id": "44dca67a-8e5a-4cf1-bf1f-87e0-2bb88e53dc34",
+      "type": "withdrawal",
+      "amount": "828.62",
+      "currency": "UGX"
+    }
+  ]
+  
