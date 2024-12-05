@@ -1,0 +1,52 @@
+/* Контейнер для всего приложения */
+.layout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Левая колонка (Profile + FriendList) */
+.left {
+  flex: 1;
+  max-width: 100%;
+}
+
+.right {
+  flex: 0 0 400px;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Заголовок таблицы */
+.transactionTitle {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Таблица */
+.transactionTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border: 1px solid #333;
+}
+
+.transactionTable th,
+.transactionTable td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+.transactionTable th {
+  background-color: #333;
+  color: white;
+}
+
+.transactionTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
